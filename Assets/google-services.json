@@ -1,0 +1,29 @@
+{
+  "project_info": {
+    "project_number": "390757487770",
+    "project_id": "island-e1139",
+    "storage_bucket": "island-e1139.firebasestorage.app"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:390757487770:android:b53a1e258f4fa979dffb23",
+        "android_client_info": {
+          "package_name": "jp.w44w.island"
+        }
+      },
+      "oauth_client": [],
+      "api_key": [
+        {
+          "current_key": "AIzaSyByLO9abRj1QRnUvVZid6I3Yl3jRi3gxDE"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": []
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
