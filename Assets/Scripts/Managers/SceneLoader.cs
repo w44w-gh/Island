@@ -161,14 +161,24 @@ public class SceneLoader : MonoBehaviour
         AsyncOperation asyncLoad = SceneManager.LoadSceneAsync("GameScene");
         asyncLoad.allowSceneActivation = false;
 
-        // 6. NTP同期とシーンロードの完了を待つ
-        while (!ntpTask.IsCompleted || asyncLoad.progress < 0.9f)
+        // 6. NTP同期とシーンロードの完了を待つ（タイムアウト付き）
+        float ntpTimeout = 10f; // 最大10秒待つ
+        float ntpElapsed = 0f;
+        while ((!ntpTask.IsCompleted || asyncLoad.progress < 0.9f) && ntpElapsed < ntpTimeout)
         {
+            ntpElapsed += Time.unscaledDeltaTime;
+
+            // シーンロードが完了していてNTPだけ待っている場合、タイムアウトで先に進む
+            if (asyncLoad.progress >= 0.9f && ntpElapsed >= ntpTimeout)
+            {
+                Debug.LogWarning("NTP sync timeout, continuing without sync");
+                break;
+            }
             yield return null;
         }
 
         // NTP同期結果をログ出力
-        bool ntpSuccess = ntpTask.Result;
+        bool ntpSuccess = ntpTask.IsCompleted && ntpTask.Result;
         if (ntpSuccess)
         {
             Debug.Log($"NTP sync successful. Server time: {NTPTimeManager.Instance.ServerTime:yyyy/MM/dd HH:mm:ss}");
