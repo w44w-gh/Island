@@ -147,8 +147,12 @@ public class SceneLoader : MonoBehaviour
             currentDay = GameManager.Instance.State.CurrentDay;
         }
 
-        // 4. 日付遷移画面を表示（"〇日目"）
+        // 4. 日付遷移画面を表示（"〇日目"）+ SE再生
         Debug.Log($"Displaying day transition: Day {currentDay}");
+        if (AudioManager.Instance != null)
+        {
+            AudioManager.Instance.PlaySE("DayTransition");
+        }
         bool dayTransitionComplete = false;
         DayTransitionScreen.Instance.ShowDay(currentDay, () => dayTransitionComplete = true);
 
@@ -229,4 +233,5 @@ public class SceneLoader : MonoBehaviour
         // ノベルシーンをロード
         LoadSceneAsync("NovelScene");
     }
+
 }

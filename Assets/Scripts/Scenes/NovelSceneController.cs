@@ -1,5 +1,6 @@
 using System;
 using UnityEngine;
+using UnityEngine.UI;
 using Utage;
 
 /// <summary>
@@ -12,6 +13,10 @@ public class NovelSceneController : MonoBehaviour
 
     [Header("UI References")]
     [SerializeField] private GameObject loadingPanel;
+    [SerializeField] private Image messageWindowBackground;
+
+    [Header("メッセージウィンドウのスタイル")]
+    [SerializeField] private Color messageWindowColor = new Color(0, 0, 0, 0.7f);  // 黒の半透明
 
     private string scenarioLabel;
     private string returnSceneName = "GameScene";
@@ -45,6 +50,9 @@ public class NovelSceneController : MonoBehaviour
             loadingPanel.SetActive(false);
         }
 
+        // メッセージウィンドウの背景色を設定
+        SetupMessageWindowStyle();
+
         // シナリオ開始
         StartScenario();
 
@@ -58,6 +66,18 @@ public class NovelSceneController : MonoBehaviour
         if (advEngine != null && advEngine.Page != null)
         {
            advEngine.Page.OnEndPage.RemoveListener(OnPageEnd);
+        }
+    }
+
+    /// <summary>
+    /// メッセージウィンドウのスタイルを設定
+    /// </summary>
+    private void SetupMessageWindowStyle()
+    {
+        if (messageWindowBackground != null)
+        {
+            messageWindowBackground.color = messageWindowColor;
+            Debug.Log("メッセージウィンドウの背景色を設定しました");
         }
     }
 

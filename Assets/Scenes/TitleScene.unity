@@ -149,7 +149,9 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   bgmClips: []
-  seClips: []
+  seClips:
+  - name: DayTransition
+    clip: {fileID: 8300000, guid: 9fa59bd527fed458894cd2d3f8ae9770, type: 3}
   defaultFadeDuration: 1
 --- !u!4 &211460650
 Transform:
@@ -482,6 +484,7 @@ MonoBehaviour:
   m_VerticalAlignment: 512
   m_textAlignment: 65535
   m_characterSpacing: 0
+  m_characterHorizontalScale: 1
   m_wordSpacing: 0
   m_lineSpacing: 0
   m_lineSpacingMax: 0
@@ -618,6 +621,7 @@ MonoBehaviour:
   m_VerticalAlignment: 256
   m_textAlignment: 65535
   m_characterSpacing: 0
+  m_characterHorizontalScale: 1
   m_wordSpacing: 0
   m_lineSpacing: 0
   m_lineSpacingMax: 0
@@ -786,6 +790,11 @@ MonoBehaviour:
   versionText: {fileID: 1486730064}
   patchStatusText: {fileID: 638240594}
   dayTransitionFont: {fileID: 11400000, guid: 26e50c6feeb334598bae1ea39ade048e, type: 2}
+  earlyMorningImage: {fileID: 0}
+  morningImage: {fileID: 0}
+  noonImage: {fileID: 0}
+  eveningImage: {fileID: 0}
+  midnightImage: {fileID: 0}
   patchAppPackageName: com.example.patchapp
   debugPatchInstalled: 1
 --- !u!1 &1486730062
@@ -883,6 +892,7 @@ MonoBehaviour:
   m_VerticalAlignment: 512
   m_textAlignment: 65535
   m_characterSpacing: 0
+  m_characterHorizontalScale: 1
   m_wordSpacing: 0
   m_lineSpacing: 0
   m_lineSpacingMax: 0
