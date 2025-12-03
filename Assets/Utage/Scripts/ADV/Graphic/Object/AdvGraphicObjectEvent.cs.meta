@@ -1,0 +1,10 @@
+﻿fileFormatVersion: 2
+guid: 473d4814ffdf475886802797f1289718
+timeCreated: 1647721793
+AssetOrigin:
+  serializedVersion: 1
+  productId: 80727
+  packageName: UTAGE3 for Unity Text Adventure Game Engine Version3
+  packageVersion: 3.12.8
+  assetPath: Assets/Utage/Scripts/ADV/Graphic/Object/AdvGraphicObjectEvent.cs
+  uploadId: 624185

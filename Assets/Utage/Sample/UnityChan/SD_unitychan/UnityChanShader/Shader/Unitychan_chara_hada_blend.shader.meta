@@ -1,0 +1,14 @@
+fileFormatVersion: 2
+guid: 7a95784c68f03494d8c7911e15fab82a
+ShaderImporter:
+  defaultTextures: []
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 
+AssetOrigin:
+  serializedVersion: 1
+  productId: 80727
+  packageName: UTAGE3 for Unity Text Adventure Game Engine Version3
+  packageVersion: 3.12.8
+  assetPath: Assets/Utage/Sample/UnityChan/SD_unitychan/UnityChanShader/Shader/Unitychan_chara_hada_blend.shader
+  uploadId: 624185

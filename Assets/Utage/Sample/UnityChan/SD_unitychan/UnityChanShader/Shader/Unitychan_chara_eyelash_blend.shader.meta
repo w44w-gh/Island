@@ -1,0 +1,14 @@
+fileFormatVersion: 2
+guid: 9627902a73805264c818754ecb22c8f9
+ShaderImporter:
+  defaultTextures: []
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 
+AssetOrigin:
+  serializedVersion: 1
+  productId: 80727
+  packageName: UTAGE3 for Unity Text Adventure Game Engine Version3
+  packageVersion: 3.12.8
+  assetPath: Assets/Utage/Sample/UnityChan/SD_unitychan/UnityChanShader/Shader/Unitychan_chara_eyelash_blend.shader
+  uploadId: 624185

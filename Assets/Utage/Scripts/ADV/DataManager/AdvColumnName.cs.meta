@@ -1,0 +1,15 @@
+fileFormatVersion: 2
+guid: 06c8c1039c0844b41b97ce566d63cee4
+MonoImporter:
+  serializedVersion: 2
+  defaultReferences: []
+  executionOrder: 0
+  icon: {instanceID: 0}
+  userData: 
+AssetOrigin:
+  serializedVersion: 1
+  productId: 80727
+  packageName: UTAGE3 for Unity Text Adventure Game Engine Version3
+  packageVersion: 3.12.8
+  assetPath: Assets/Utage/Scripts/ADV/DataManager/AdvColumnName.cs
+  uploadId: 624185

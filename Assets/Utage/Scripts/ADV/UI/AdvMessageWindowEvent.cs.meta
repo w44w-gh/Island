@@ -1,0 +1,10 @@
+﻿fileFormatVersion: 2
+guid: 44ad62d51cd5499cbe628608088b2e75
+timeCreated: 1631939895
+AssetOrigin:
+  serializedVersion: 1
+  productId: 80727
+  packageName: UTAGE3 for Unity Text Adventure Game Engine Version3
+  packageVersion: 3.12.8
+  assetPath: Assets/Utage/Scripts/ADV/UI/AdvMessageWindowEvent.cs
+  uploadId: 624185

@@ -1,0 +1,15 @@
+fileFormatVersion: 2
+guid: ab5be1f371125e34c980d233499a706a
+timeCreated: 1471532950
+licenseType: Store
+NativeFormatImporter:
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 
+AssetOrigin:
+  serializedVersion: 1
+  productId: 80727
+  packageName: UTAGE3 for Unity Text Adventure Game Engine Version3
+  packageVersion: 3.12.8
+  assetPath: Assets/Utage/Sample/ParticleExamples/EmbersParticle.mat
+  uploadId: 624185

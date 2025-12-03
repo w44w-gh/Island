@@ -1,0 +1,13 @@
+fileFormatVersion: 2
+guid: 2d4e0e0d2eda147be851af6d686de166
+NativeFormatImporter:
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 
+AssetOrigin:
+  serializedVersion: 1
+  productId: 80727
+  packageName: UTAGE3 for Unity Text Adventure Game Engine Version3
+  packageVersion: 3.12.8
+  assetPath: Assets/Utage/Sample/UnityChan/SD_unitychan/FaceAnimations/_faceOnly.mask
+  uploadId: 624185

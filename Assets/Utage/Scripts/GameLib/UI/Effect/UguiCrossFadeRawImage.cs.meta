@@ -1,0 +1,19 @@
+fileFormatVersion: 2
+guid: 27a444dbe1da43445900ed8457099e86
+timeCreated: 1461770033
+licenseType: Store
+MonoImporter:
+  serializedVersion: 2
+  defaultReferences: []
+  executionOrder: 0
+  icon: {instanceID: 0}
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 
+AssetOrigin:
+  serializedVersion: 1
+  productId: 80727
+  packageName: UTAGE3 for Unity Text Adventure Game Engine Version3
+  packageVersion: 3.12.8
+  assetPath: Assets/Utage/Scripts/GameLib/UI/Effect/UguiCrossFadeRawImage.cs
+  uploadId: 624185

@@ -1,0 +1,17 @@
+fileFormatVersion: 2
+guid: bd026706e81db0440add962177d87b23
+MonoImporter:
+  serializedVersion: 2
+  defaultReferences: []
+  executionOrder: 0
+  icon: {instanceID: 0}
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 
+AssetOrigin:
+  serializedVersion: 1
+  productId: 80727
+  packageName: UTAGE3 for Unity Text Adventure Game Engine Version3
+  packageVersion: 3.12.8
+  assetPath: Assets/Utage/Sample/UnityChan/SD_unitychan/Scripts/CameraController.cs
+  uploadId: 624185

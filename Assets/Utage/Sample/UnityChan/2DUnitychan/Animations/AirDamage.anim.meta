@@ -1,0 +1,13 @@
+fileFormatVersion: 2
+guid: 1383dae016d2246a0847f7c2d1b540d8
+NativeFormatImporter:
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 
+AssetOrigin:
+  serializedVersion: 1
+  productId: 80727
+  packageName: UTAGE3 for Unity Text Adventure Game Engine Version3
+  packageVersion: 3.12.8
+  assetPath: Assets/Utage/Sample/UnityChan/2DUnitychan/Animations/AirDamage.anim
+  uploadId: 624185

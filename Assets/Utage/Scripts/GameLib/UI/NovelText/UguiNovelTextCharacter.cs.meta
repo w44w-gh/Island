@@ -1,0 +1,15 @@
+fileFormatVersion: 2
+guid: fc5b53c5576dd0143877a6a4e08456a4
+MonoImporter:
+  serializedVersion: 2
+  defaultReferences: []
+  executionOrder: 0
+  icon: {instanceID: 0}
+  userData: 
+AssetOrigin:
+  serializedVersion: 1
+  productId: 80727
+  packageName: UTAGE3 for Unity Text Adventure Game Engine Version3
+  packageVersion: 3.12.8
+  assetPath: Assets/Utage/Scripts/GameLib/UI/NovelText/UguiNovelTextCharacter.cs
+  uploadId: 624185

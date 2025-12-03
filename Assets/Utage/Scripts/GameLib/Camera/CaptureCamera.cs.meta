@@ -1,0 +1,19 @@
+fileFormatVersion: 2
+guid: f436ff0a7ae4f034085d50d764149591
+timeCreated: 1481033781
+licenseType: Store
+MonoImporter:
+  serializedVersion: 2
+  defaultReferences: []
+  executionOrder: -50
+  icon: {instanceID: 0}
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 
+AssetOrigin:
+  serializedVersion: 1
+  productId: 80727
+  packageName: UTAGE3 for Unity Text Adventure Game Engine Version3
+  packageVersion: 3.12.8
+  assetPath: Assets/Utage/Scripts/GameLib/Camera/CaptureCamera.cs
+  uploadId: 624185

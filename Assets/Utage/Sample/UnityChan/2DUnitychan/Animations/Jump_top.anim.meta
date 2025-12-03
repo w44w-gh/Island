@@ -1,0 +1,13 @@
+fileFormatVersion: 2
+guid: 81592dad0ac99d44fa04472eff6556e9
+NativeFormatImporter:
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 
+AssetOrigin:
+  serializedVersion: 1
+  productId: 80727
+  packageName: UTAGE3 for Unity Text Adventure Game Engine Version3
+  packageVersion: 3.12.8
+  assetPath: Assets/Utage/Sample/UnityChan/2DUnitychan/Animations/Jump_top.anim
+  uploadId: 624185

@@ -1,0 +1,15 @@
+fileFormatVersion: 2
+guid: 4b973b3213fba2c44830a5a9c48ef689
+timeCreated: 1454392890
+licenseType: Store
+DefaultImporter:
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 
+AssetOrigin:
+  serializedVersion: 1
+  productId: 80727
+  packageName: UTAGE3 for Unity Text Adventure Game Engine Version3
+  packageVersion: 3.12.8
+  assetPath: Assets/Utage/Template/Resources/Template/Texture/Sprite/keep.keep
+  uploadId: 624185

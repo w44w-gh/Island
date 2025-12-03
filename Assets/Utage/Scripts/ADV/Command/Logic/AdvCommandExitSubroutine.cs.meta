@@ -1,0 +1,10 @@
+﻿fileFormatVersion: 2
+guid: 7308f9bd00b84112a7dc2520d8bb21ce
+timeCreated: 1689027273
+AssetOrigin:
+  serializedVersion: 1
+  productId: 80727
+  packageName: UTAGE3 for Unity Text Adventure Game Engine Version3
+  packageVersion: 3.12.8
+  assetPath: Assets/Utage/Scripts/ADV/Command/Logic/AdvCommandExitSubroutine.cs
+  uploadId: 624185

@@ -1,6 +1,6 @@
 using System;
 using UnityEngine;
-//using Utage;
+using Utage;
 
 /// <summary>
 /// ノベルシーンを制御するクラス
@@ -8,7 +8,7 @@ using UnityEngine;
 public class NovelSceneController : MonoBehaviour
 {
     [Header("宴の設定")]
-    //[SerializeField] private AdvEngine advEngine;
+    [SerializeField] private AdvEngine advEngine;
 
     [Header("UI References")]
     [SerializeField] private GameObject loadingPanel;
@@ -19,12 +19,12 @@ public class NovelSceneController : MonoBehaviour
     private void Start()
     {
         // 宴のエンジンが設定されているか確認
-        //if (advEngine == null)
-        //{
-        //    Debug.LogError("AdvEngineが設定されていません！");
-        //    ReturnToGameScene();
-        //    return;
-        //}
+        if (advEngine == null)
+        {
+           Debug.LogError("AdvEngineが設定されていません！");
+           ReturnToGameScene();
+           return;
+        }
 
         // GameManagerからシナリオラベルを取得
         scenarioLabel = NovelSceneData.Instance.ScenarioLabel;
@@ -49,16 +49,16 @@ public class NovelSceneController : MonoBehaviour
         StartScenario();
 
         // 宴のシナリオ終了イベントを購読
-        //advEngine.Page.OnEndPage.AddListener(OnPageEnd);
+        advEngine.Page.OnEndPage.AddListener(OnPageEnd);
     }
 
     private void OnDestroy()
     {
         // イベント購読解除
-        //if (advEngine != null && advEngine.Page != null)
-        //{
-        //    //advEngine.Page.OnEndPage.RemoveListener(OnPageEnd);
-        //}
+        if (advEngine != null && advEngine.Page != null)
+        {
+           advEngine.Page.OnEndPage.RemoveListener(OnPageEnd);
+        }
     }
 
     /// <summary>
@@ -68,7 +68,7 @@ public class NovelSceneController : MonoBehaviour
     {
         try
         {
-            //advEngine.JumpScenario(scenarioLabel);
+            advEngine.JumpScenario(scenarioLabel);
             Debug.Log($"シナリオ '{scenarioLabel}' を開始しました");
         }
         catch (Exception e)
@@ -81,15 +81,15 @@ public class NovelSceneController : MonoBehaviour
     /// <summary>
     /// ページ終了時の処理
     /// </summary>
-    //private void OnPageEnd(AdvPage page)
-    //{
-    //    // シナリオが完全に終了したかチェック
-    //    if (advEngine.IsEndScenario)
-    //    {
-    //        Debug.Log("シナリオが終了しました");
-    //        OnScenarioEnd();
-    //    }
-    //}
+    private void OnPageEnd(AdvPage page)
+    {
+       // シナリオが完全に終了したかチェック
+       if (advEngine.IsEndScenario)
+       {
+           Debug.Log("シナリオが終了しました");
+           OnScenarioEnd();
+       }
+    }
 
     /// <summary>
     /// シナリオ終了時の処理

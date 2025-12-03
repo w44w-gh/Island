@@ -1,0 +1,19 @@
+fileFormatVersion: 2
+guid: 188caee857b33394ab8176262253a62c
+timeCreated: 1567231953
+licenseType: Store
+MonoImporter:
+  serializedVersion: 2
+  defaultReferences: []
+  executionOrder: 0
+  icon: {instanceID: 0}
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 
+AssetOrigin:
+  serializedVersion: 1
+  productId: 80727
+  packageName: UTAGE3 for Unity Text Adventure Game Engine Version3
+  packageVersion: 3.12.8
+  assetPath: Assets/Utage/Editor/Scripts/Menu/Project/AdvScenarioCharacterCountChecker.cs
+  uploadId: 624185

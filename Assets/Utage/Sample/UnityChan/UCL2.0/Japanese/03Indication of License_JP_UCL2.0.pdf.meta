@@ -1,0 +1,15 @@
+fileFormatVersion: 2
+guid: f6b3d0231e4363141b6544862cab5431
+timeCreated: 1481195119
+licenseType: Store
+DefaultImporter:
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 
+AssetOrigin:
+  serializedVersion: 1
+  productId: 80727
+  packageName: UTAGE3 for Unity Text Adventure Game Engine Version3
+  packageVersion: 3.12.8
+  assetPath: Assets/Utage/Sample/UnityChan/UCL2.0/Japanese/03Indication of License_JP_UCL2.0.pdf
+  uploadId: 624185

@@ -1,0 +1,15 @@
+fileFormatVersion: 2
+guid: f7e07afcdd3049f4e8e900858a07d057
+MonoImporter:
+  serializedVersion: 2
+  defaultReferences: []
+  executionOrder: 0
+  icon: {instanceID: 0}
+  userData: 
+AssetOrigin:
+  serializedVersion: 1
+  productId: 80727
+  packageName: UTAGE3 for Unity Text Adventure Game Engine Version3
+  packageVersion: 3.12.8
+  assetPath: Assets/Utage/Scripts/ADV/Command/Wait/AdvCommandWait.cs
+  uploadId: 624185

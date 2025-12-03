@@ -1,0 +1,13 @@
+fileFormatVersion: 2
+guid: 8c2f91b5894c48c41b05954ff2db2962
+NativeFormatImporter:
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 
+AssetOrigin:
+  serializedVersion: 1
+  productId: 80727
+  packageName: UTAGE3 for Unity Text Adventure Game Engine Version3
+  packageVersion: 3.12.8
+  assetPath: Assets/Utage/Sample/UnityChan/2DUnitychan/Animations/Jump_down.anim
+  uploadId: 624185

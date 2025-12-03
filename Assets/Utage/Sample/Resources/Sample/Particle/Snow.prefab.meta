@@ -1,0 +1,15 @@
+fileFormatVersion: 2
+guid: 4d7a5e0f2d154ad4ca461e9e24cf18dd
+timeCreated: 1480479795
+licenseType: Store
+NativeFormatImporter:
+  userData: 
+  assetBundleName: particle/snow.asset
+  assetBundleVariant: 
+AssetOrigin:
+  serializedVersion: 1
+  productId: 80727
+  packageName: UTAGE3 for Unity Text Adventure Game Engine Version3
+  packageVersion: 3.12.8
+  assetPath: Assets/Utage/Sample/Resources/Sample/Particle/Snow.prefab
+  uploadId: 624185

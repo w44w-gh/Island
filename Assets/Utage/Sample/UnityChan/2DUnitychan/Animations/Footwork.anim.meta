@@ -1,0 +1,13 @@
+fileFormatVersion: 2
+guid: c4f948d6d6b8eef45b36576116fcbb7f
+NativeFormatImporter:
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 
+AssetOrigin:
+  serializedVersion: 1
+  productId: 80727
+  packageName: UTAGE3 for Unity Text Adventure Game Engine Version3
+  packageVersion: 3.12.8
+  assetPath: Assets/Utage/Sample/UnityChan/2DUnitychan/Animations/Footwork.anim
+  uploadId: 624185

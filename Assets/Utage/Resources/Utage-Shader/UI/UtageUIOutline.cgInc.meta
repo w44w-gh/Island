@@ -1,0 +1,16 @@
+fileFormatVersion: 2
+guid: 6564f147704b2834d936089d4350877b
+timeCreated: 1544705560
+licenseType: Store
+ShaderImporter:
+  defaultTextures: []
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 
+AssetOrigin:
+  serializedVersion: 1
+  productId: 80727
+  packageName: UTAGE3 for Unity Text Adventure Game Engine Version3
+  packageVersion: 3.12.8
+  assetPath: Assets/Utage/Resources/Utage-Shader/UI/UtageUIOutline.cgInc
+  uploadId: 624185

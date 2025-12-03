@@ -1,0 +1,15 @@
+fileFormatVersion: 2
+guid: 1ce08b5176f3c2c4b8490e9be20e9422
+timeCreated: 1454392890
+licenseType: Store
+DefaultImporter:
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 
+AssetOrigin:
+  serializedVersion: 1
+  productId: 80727
+  packageName: UTAGE3 for Unity Text Adventure Game Engine Version3
+  packageVersion: 3.12.8
+  assetPath: Assets/Utage/Template/Resources/Template/Video/keep.keep
+  uploadId: 624185

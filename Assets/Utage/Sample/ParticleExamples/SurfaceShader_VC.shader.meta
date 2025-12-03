@@ -1,0 +1,16 @@
+fileFormatVersion: 2
+guid: 569fd051d6a30aa42b6bf47fcd9628c8
+timeCreated: 1473092108
+licenseType: Store
+ShaderImporter:
+  defaultTextures: []
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 
+AssetOrigin:
+  serializedVersion: 1
+  productId: 80727
+  packageName: UTAGE3 for Unity Text Adventure Game Engine Version3
+  packageVersion: 3.12.8
+  assetPath: Assets/Utage/Sample/ParticleExamples/SurfaceShader_VC.shader
+  uploadId: 624185

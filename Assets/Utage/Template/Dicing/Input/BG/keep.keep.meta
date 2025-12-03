@@ -1,0 +1,15 @@
+fileFormatVersion: 2
+guid: 4fe068069594f49db85cb6d7f301f899
+timeCreated: 1471962238
+licenseType: Store
+DefaultImporter:
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 
+AssetOrigin:
+  serializedVersion: 1
+  productId: 80727
+  packageName: UTAGE3 for Unity Text Adventure Game Engine Version3
+  packageVersion: 3.12.8
+  assetPath: Assets/Utage/Template/Dicing/Input/BG/keep.keep
+  uploadId: 624185

@@ -1,0 +1,14 @@
+fileFormatVersion: 2
+guid: 0298b868476735f41857e9ba8f0d4cd1
+ShaderImporter:
+  defaultTextures: []
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 
+AssetOrigin:
+  serializedVersion: 1
+  productId: 80727
+  packageName: UTAGE3 for Unity Text Adventure Game Engine Version3
+  packageVersion: 3.12.8
+  assetPath: Assets/Utage/Sample/UnityChan/SD_unitychan/UnityChanShader/Shader/Unitychan_chara_akarami_blend.shader
+  uploadId: 624185

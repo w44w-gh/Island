@@ -1,0 +1,19 @@
+fileFormatVersion: 2
+guid: 752b454d2e4bba7479c6f472b5ced3ac
+timeCreated: 1459329520
+licenseType: Store
+MonoImporter:
+  serializedVersion: 2
+  defaultReferences: []
+  executionOrder: 0
+  icon: {instanceID: 0}
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 
+AssetOrigin:
+  serializedVersion: 1
+  productId: 80727
+  packageName: UTAGE3 for Unity Text Adventure Game Engine Version3
+  packageVersion: 3.12.8
+  assetPath: Assets/Utage/Scripts/ADV/Extra/AdvOpenGallery.cs
+  uploadId: 624185

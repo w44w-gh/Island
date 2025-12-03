@@ -1,0 +1,11 @@
+fileFormatVersion: 2
+guid: 05c9d87602ae06a4095cf87e34e38837
+ShaderImporter:
+  userData: 
+AssetOrigin:
+  serializedVersion: 1
+  productId: 80727
+  packageName: UTAGE3 for Unity Text Adventure Game Engine Version3
+  packageVersion: 3.12.8
+  assetPath: Assets/Utage/Resources/Utage-Shader/ImageEffect/Utage-ImageEffect-ColorFade.shader
+  uploadId: 624185

@@ -1,0 +1,13 @@
+fileFormatVersion: 2
+guid: 33617e2203e55fa46801e063486b59f3
+NativeFormatImporter:
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 
+AssetOrigin:
+  serializedVersion: 1
+  productId: 80727
+  packageName: UTAGE3 for Unity Text Adventure Game Engine Version3
+  packageVersion: 3.12.8
+  assetPath: Assets/Utage/Sample/UnityChan/SD_unitychan/Models/Materials/def_mat.mat
+  uploadId: 624185

@@ -1,0 +1,11 @@
+fileFormatVersion: 2
+guid: a59a95586f46b47419926748899dff25
+NativeFormatImporter:
+  userData: 
+AssetOrigin:
+  serializedVersion: 1
+  productId: 80727
+  packageName: UTAGE3 for Unity Text Adventure Game Engine Version3
+  packageVersion: 3.12.8
+  assetPath: Assets/Utage/Template/Prefabs/UI/SceneGalleryItem.prefab
+  uploadId: 624185

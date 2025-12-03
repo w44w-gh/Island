@@ -1,0 +1,13 @@
+fileFormatVersion: 2
+guid: a0702f03fac0faa4d983e423203b2fb4
+NativeFormatImporter:
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 
+AssetOrigin:
+  serializedVersion: 1
+  productId: 80727
+  packageName: UTAGE3 for Unity Text Adventure Game Engine Version3
+  packageVersion: 3.12.8
+  assetPath: Assets/Utage/Sample/UnityChan/SD_unitychan/Animations/SD_unitychan_motion_humanoid.controller
+  uploadId: 624185

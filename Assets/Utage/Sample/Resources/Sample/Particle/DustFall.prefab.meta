@@ -1,0 +1,15 @@
+fileFormatVersion: 2
+guid: c7d1bc110fac57e4bb31db75beb72c0c
+timeCreated: 1480598482
+licenseType: Store
+NativeFormatImporter:
+  userData: 
+  assetBundleName: particle/dustfall.asset
+  assetBundleVariant: 
+AssetOrigin:
+  serializedVersion: 1
+  productId: 80727
+  packageName: UTAGE3 for Unity Text Adventure Game Engine Version3
+  packageVersion: 3.12.8
+  assetPath: Assets/Utage/Sample/Resources/Sample/Particle/DustFall.prefab
+  uploadId: 624185

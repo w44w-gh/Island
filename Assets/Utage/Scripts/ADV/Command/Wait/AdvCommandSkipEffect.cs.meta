@@ -1,0 +1,10 @@
+﻿fileFormatVersion: 2
+guid: 628f201021a84d3dbe6b6f6c24030483
+timeCreated: 1654130015
+AssetOrigin:
+  serializedVersion: 1
+  productId: 80727
+  packageName: UTAGE3 for Unity Text Adventure Game Engine Version3
+  packageVersion: 3.12.8
+  assetPath: Assets/Utage/Scripts/ADV/Command/Wait/AdvCommandSkipEffect.cs
+  uploadId: 624185

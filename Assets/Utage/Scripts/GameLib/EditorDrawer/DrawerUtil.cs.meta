@@ -1,0 +1,19 @@
+fileFormatVersion: 2
+guid: ad4241e9fce428a418fe868e05d0f9eb
+timeCreated: 1462401336
+licenseType: Store
+MonoImporter:
+  serializedVersion: 2
+  defaultReferences: []
+  executionOrder: 0
+  icon: {instanceID: 0}
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 
+AssetOrigin:
+  serializedVersion: 1
+  productId: 80727
+  packageName: UTAGE3 for Unity Text Adventure Game Engine Version3
+  packageVersion: 3.12.8
+  assetPath: Assets/Utage/Scripts/GameLib/EditorDrawer/DrawerUtil.cs
+  uploadId: 624185

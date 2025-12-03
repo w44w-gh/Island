@@ -1,0 +1,17 @@
+fileFormatVersion: 2
+guid: c47b8e16cb1c4ec4c8295f8ccb4cf066
+MonoImporter:
+  serializedVersion: 2
+  defaultReferences:
+  - textSettings: {instanceID: 0}
+  - emojiData: {instanceID: 0}
+  executionOrder: 0
+  icon: {instanceID: 0}
+  userData: 
+AssetOrigin:
+  serializedVersion: 1
+  productId: 80727
+  packageName: UTAGE3 for Unity Text Adventure Game Engine Version3
+  packageVersion: 3.12.8
+  assetPath: Assets/Utage/Scripts/GameLib/UI/NovelText/UguiNovelTextGeneratorInfo.cs
+  uploadId: 624185

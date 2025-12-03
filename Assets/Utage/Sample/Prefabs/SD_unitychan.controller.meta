@@ -1,0 +1,13 @@
+fileFormatVersion: 2
+guid: e31370a823587404595b7f948e16e066
+NativeFormatImporter:
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 
+AssetOrigin:
+  serializedVersion: 1
+  productId: 80727
+  packageName: UTAGE3 for Unity Text Adventure Game Engine Version3
+  packageVersion: 3.12.8
+  assetPath: Assets/Utage/Sample/Prefabs/SD_unitychan.controller
+  uploadId: 624185

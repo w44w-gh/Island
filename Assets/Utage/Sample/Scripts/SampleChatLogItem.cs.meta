@@ -1,0 +1,19 @@
+fileFormatVersion: 2
+guid: 21b8b232853b26e479614ab5f002366f
+timeCreated: 1455232769
+licenseType: Store
+MonoImporter:
+  serializedVersion: 2
+  defaultReferences: []
+  executionOrder: -10
+  icon: {instanceID: 0}
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 
+AssetOrigin:
+  serializedVersion: 1
+  productId: 80727
+  packageName: UTAGE3 for Unity Text Adventure Game Engine Version3
+  packageVersion: 3.12.8
+  assetPath: Assets/Utage/Sample/Scripts/SampleChatLogItem.cs
+  uploadId: 624185

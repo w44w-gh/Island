@@ -1,0 +1,15 @@
+fileFormatVersion: 2
+guid: b5a107ee46027b04fba2a763c4e4cec8
+timeCreated: 1457269675
+licenseType: Store
+NativeFormatImporter:
+  userData: 
+  assetBundleName: sample.scenarios.asset
+  assetBundleVariant: 
+AssetOrigin:
+  serializedVersion: 1
+  productId: 80727
+  packageName: UTAGE3 for Unity Text Adventure Game Engine Version3
+  packageVersion: 3.12.8
+  assetPath: Assets/Utage/Sample/Sample.scenarios.asset
+  uploadId: 624185

@@ -1,0 +1,11 @@
+fileFormatVersion: 2
+guid: 5397173a75a0bfa45bf4ea1746f6ba2e
+ShaderImporter:
+  userData: 
+AssetOrigin:
+  serializedVersion: 1
+  productId: 80727
+  packageName: UTAGE3 for Unity Text Adventure Game Engine Version3
+  packageVersion: 3.12.8
+  assetPath: Assets/Utage/Resources/Utage-Shader/ImageEffect/Utage-ImageEffect-Mosaic.shader
+  uploadId: 624185

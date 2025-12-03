@@ -1,0 +1,15 @@
+fileFormatVersion: 2
+guid: 8823234e893a9304888ea6c0185c930d
+MonoImporter:
+  serializedVersion: 2
+  defaultReferences: []
+  executionOrder: 0
+  icon: {instanceID: 0}
+  userData: 
+AssetOrigin:
+  serializedVersion: 1
+  productId: 80727
+  packageName: UTAGE3 for Unity Text Adventure Game Engine Version3
+  packageVersion: 3.12.8
+  assetPath: Assets/Utage/Scripts/GameLib/Dictionary/SerializableDictionary.cs
+  uploadId: 624185

@@ -1,0 +1,19 @@
+fileFormatVersion: 2
+guid: 1d906a60db2a94943a05563666936dc1
+timeCreated: 1462401547
+licenseType: Store
+MonoImporter:
+  serializedVersion: 2
+  defaultReferences: []
+  executionOrder: 0
+  icon: {instanceID: 0}
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 
+AssetOrigin:
+  serializedVersion: 1
+  productId: 80727
+  packageName: UTAGE3 for Unity Text Adventure Game Engine Version3
+  packageVersion: 3.12.8
+  assetPath: Assets/Utage/Scripts/GameLib/EditorDrawer/Propety/IntPopupAttribute.cs
+  uploadId: 624185

@@ -1,0 +1,15 @@
+fileFormatVersion: 2
+guid: 5578a7c1d20463443b1a0369e2099634
+timeCreated: 1448744210
+licenseType: Store
+NativeFormatImporter:
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 
+AssetOrigin:
+  serializedVersion: 1
+  productId: 80727
+  packageName: UTAGE3 for Unity Text Adventure Game Engine Version3
+  packageVersion: 3.12.8
+  assetPath: Assets/Utage/Sample/ScriptableObject/CustomProjectSetting.asset
+  uploadId: 624185

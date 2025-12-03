@@ -1,0 +1,19 @@
+fileFormatVersion: 2
+guid: 1745a6a49498c8c4cba942b090671a3a
+timeCreated: 1443764283
+licenseType: Store
+MonoImporter:
+  serializedVersion: 2
+  defaultReferences: []
+  executionOrder: 0
+  icon: {instanceID: 0}
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 
+AssetOrigin:
+  serializedVersion: 1
+  productId: 80727
+  packageName: UTAGE3 for Unity Text Adventure Game Engine Version3
+  packageVersion: 3.12.8
+  assetPath: Assets/Utage/Scripts/ADV/Command/UI/GUI/AdvCommandGuiSize.cs
+  uploadId: 624185

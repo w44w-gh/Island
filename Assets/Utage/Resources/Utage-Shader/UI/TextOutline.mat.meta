@@ -1,0 +1,15 @@
+fileFormatVersion: 2
+guid: ed3d4d090d43e804eabc8ac3c7b76824
+timeCreated: 1544698500
+licenseType: Store
+NativeFormatImporter:
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 
+AssetOrigin:
+  serializedVersion: 1
+  productId: 80727
+  packageName: UTAGE3 for Unity Text Adventure Game Engine Version3
+  packageVersion: 3.12.8
+  assetPath: Assets/Utage/Resources/Utage-Shader/UI/TextOutline.mat
+  uploadId: 624185

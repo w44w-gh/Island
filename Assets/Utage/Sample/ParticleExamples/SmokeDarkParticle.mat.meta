@@ -1,0 +1,15 @@
+fileFormatVersion: 2
+guid: 4644872ac9077ff408f17851e78a2320
+timeCreated: 1471944184
+licenseType: Store
+NativeFormatImporter:
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 
+AssetOrigin:
+  serializedVersion: 1
+  productId: 80727
+  packageName: UTAGE3 for Unity Text Adventure Game Engine Version3
+  packageVersion: 3.12.8
+  assetPath: Assets/Utage/Sample/ParticleExamples/SmokeDarkParticle.mat
+  uploadId: 624185

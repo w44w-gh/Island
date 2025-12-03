@@ -1,0 +1,12 @@
+fileFormatVersion: 2
+guid: 4e03e5f7cf4ed6c46b07d3487d0bd5a1
+NativeFormatImporter:
+  userData: 
+  assetBundleName: 
+AssetOrigin:
+  serializedVersion: 1
+  productId: 80727
+  packageName: UTAGE3 for Unity Text Adventure Game Engine Version3
+  packageVersion: 3.12.8
+  assetPath: Assets/Utage/Sample/ParticleExamples/ParticleGlow.mat
+  uploadId: 624185

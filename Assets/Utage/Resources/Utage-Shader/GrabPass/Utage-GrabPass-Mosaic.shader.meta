@@ -1,0 +1,16 @@
+fileFormatVersion: 2
+guid: 8ae4442e83de14a43851597fa4723989
+timeCreated: 1497254440
+licenseType: Store
+ShaderImporter:
+  defaultTextures: []
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 
+AssetOrigin:
+  serializedVersion: 1
+  productId: 80727
+  packageName: UTAGE3 for Unity Text Adventure Game Engine Version3
+  packageVersion: 3.12.8
+  assetPath: Assets/Utage/Resources/Utage-Shader/GrabPass/Utage-GrabPass-Mosaic.shader
+  uploadId: 624185

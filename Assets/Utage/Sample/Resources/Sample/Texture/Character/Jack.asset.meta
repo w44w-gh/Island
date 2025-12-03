@@ -1,0 +1,15 @@
+fileFormatVersion: 2
+guid: c41b6814d7907eb4ba996bbcb2e4e043
+timeCreated: 1478928507
+licenseType: Store
+NativeFormatImporter:
+  userData: 
+  assetBundleName: texture/character/jack.asset
+  assetBundleVariant: 
+AssetOrigin:
+  serializedVersion: 1
+  productId: 80727
+  packageName: UTAGE3 for Unity Text Adventure Game Engine Version3
+  packageVersion: 3.12.8
+  assetPath: Assets/Utage/Sample/Resources/Sample/Texture/Character/Jack.asset
+  uploadId: 624185

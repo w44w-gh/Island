@@ -1,0 +1,11 @@
+fileFormatVersion: 2
+guid: cc02ba2535c095b4d907872f6a4717ef
+NativeFormatImporter:
+  userData: 
+AssetOrigin:
+  serializedVersion: 1
+  productId: 80727
+  packageName: UTAGE3 for Unity Text Adventure Game Engine Version3
+  packageVersion: 3.12.8
+  assetPath: Assets/Utage/Template/ScriptableObject/LanguageManager.asset
+  uploadId: 624185

@@ -1,0 +1,15 @@
+fileFormatVersion: 2
+guid: 3388baca6ee49c448a8d53b7ebb080ce
+MonoImporter:
+  serializedVersion: 2
+  defaultReferences: []
+  executionOrder: 0
+  icon: {instanceID: 0}
+  userData: 
+AssetOrigin:
+  serializedVersion: 1
+  productId: 80727
+  packageName: UTAGE3 for Unity Text Adventure Game Engine Version3
+  packageVersion: 3.12.8
+  assetPath: Assets/Utage/Scripts/GameLib/UI/Effect/UguiRichOutline.cs
+  uploadId: 624185

@@ -1,0 +1,15 @@
+fileFormatVersion: 2
+guid: dd7244f0123d7f04e9d06673968beced
+MonoImporter:
+  serializedVersion: 2
+  defaultReferences: []
+  executionOrder: 0
+  icon: {instanceID: 0}
+  userData: 
+AssetOrigin:
+  serializedVersion: 1
+  productId: 80727
+  packageName: UTAGE3 for Unity Text Adventure Game Engine Version3
+  packageVersion: 3.12.8
+  assetPath: Assets/Utage/Scripts/GameLib/Util/ColorUtil.cs
+  uploadId: 624185

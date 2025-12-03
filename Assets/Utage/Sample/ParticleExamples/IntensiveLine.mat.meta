@@ -1,0 +1,15 @@
+fileFormatVersion: 2
+guid: a1911ccb8a37e3545bb597651b0ea9e4
+timeCreated: 1480499676
+licenseType: Store
+NativeFormatImporter:
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 
+AssetOrigin:
+  serializedVersion: 1
+  productId: 80727
+  packageName: UTAGE3 for Unity Text Adventure Game Engine Version3
+  packageVersion: 3.12.8
+  assetPath: Assets/Utage/Sample/ParticleExamples/IntensiveLine.mat
+  uploadId: 624185
