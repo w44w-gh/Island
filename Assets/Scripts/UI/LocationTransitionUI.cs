@@ -58,13 +58,163 @@ public class LocationTransitionUI : MonoBehaviour
         // ズームイン + フェードアウト（同時）
         yield return StartCoroutine(ZoomAndFade(targetPosition, zoomScale, true));
 
-        // ここで呼び出し元が場所切り替えを行う
+        // フェードが完了（画面が黒い）時点でMapViewをリセット
+        // （この後すぐにShowLocationViewでMapViewが非表示になるので見えない）
+        ResetMapViewImmediate();
+    }
 
-        // 少し待つ（オプション）
-        yield return new WaitForSeconds(0.1f);
+    /// <summary>
+    /// フェードインのみ（画面切り替え後に呼び出す）
+    /// </summary>
+    public IEnumerator FadeIn()
+    {
+        yield return StartCoroutine(FadeInOnly());
+    }
 
-        // フェードイン + ズームリセット
-        yield return StartCoroutine(FadeInAndResetZoom());
+    /// <summary>
+    /// MapViewを即座にリセット（フェード中に呼び出す）
+    /// </summary>
+    private void ResetMapViewImmediate()
+    {
+        if (mapViewTransform != null)
+        {
+            mapViewTransform.localPosition = originalMapPosition;
+            mapViewTransform.localScale = originalMapScale;
+        }
+    }
+
+    /// <summary>
+    /// マップに戻る演出（フェードアウト → ズームアウト）
+    /// </summary>
+    public IEnumerator ZoomOutToMap()
+    {
+        // フェードアウト（画面を黒くする）
+        yield return StartCoroutine(FadeOutOnly());
+
+        // ここで呼び出し元がMapViewに切り替える
+
+        // MapViewを縮小状態からスタートしてズームアウト（拡大→等倍）
+        yield return StartCoroutine(ZoomOutAndFadeIn());
+    }
+
+    /// <summary>
+    /// フェードアウト（公開用）
+    /// </summary>
+    public IEnumerator FadeOut()
+    {
+        yield return StartCoroutine(FadeOutOnly());
+    }
+
+    /// <summary>
+    /// ズームアウトしながらフェードイン（公開用）
+    /// </summary>
+    public IEnumerator ZoomOutAndFadeInPublic()
+    {
+        yield return StartCoroutine(ZoomOutAndFadeIn());
+    }
+
+    /// <summary>
+    /// フェードアウトのみ（画面を黒くする）
+    /// </summary>
+    private IEnumerator FadeOutOnly()
+    {
+        float elapsed = 0f;
+        float fadeDuration = 0.3f;
+
+        if (fadePanel != null)
+        {
+            fadePanel.gameObject.SetActive(true);
+        }
+        else
+        {
+            yield break;
+        }
+
+        while (elapsed < fadeDuration)
+        {
+            elapsed += Time.deltaTime;
+            float t = elapsed / fadeDuration;
+
+            fadePanel.alpha = t;
+
+            yield return null;
+        }
+
+        fadePanel.alpha = 1f;
+    }
+
+    /// <summary>
+    /// ズームアウトしながらフェードイン（縮小状態から等倍へ）
+    /// </summary>
+    private IEnumerator ZoomOutAndFadeIn()
+    {
+        float elapsed = 0f;
+        float zoomOutDuration = zoomDuration * 0.6f;  // ズームアウトは速めに
+
+        // 縮小状態からスタート
+        Vector3 startScale = originalMapScale * zoomScale;
+        Vector3 endScale = originalMapScale;
+
+        mapViewTransform.localScale = startScale;
+        mapViewTransform.localPosition = originalMapPosition;
+
+        while (elapsed < zoomOutDuration)
+        {
+            elapsed += Time.deltaTime;
+            float t = elapsed / zoomOutDuration;
+
+            // イージング（EaseInOut）
+            float smoothT = Mathf.SmoothStep(0f, 1f, t);
+
+            // ズームアウト（大→小）
+            mapViewTransform.localScale = Vector3.Lerp(startScale, endScale, smoothT);
+
+            // フェードイン
+            if (fadePanel != null)
+            {
+                fadePanel.alpha = 1f - smoothT;
+            }
+
+            yield return null;
+        }
+
+        // 最終状態を確定
+        mapViewTransform.localScale = endScale;
+        mapViewTransform.localPosition = originalMapPosition;
+
+        if (fadePanel != null)
+        {
+            fadePanel.alpha = 0f;
+            fadePanel.gameObject.SetActive(false);
+        }
+    }
+
+    /// <summary>
+    /// フェードインのみ
+    /// </summary>
+    private IEnumerator FadeInOnly()
+    {
+        float elapsed = 0f;
+        float fadeDuration = 0.3f;
+
+        while (elapsed < fadeDuration)
+        {
+            elapsed += Time.deltaTime;
+            float t = elapsed / fadeDuration;
+
+            if (fadePanel != null)
+            {
+                fadePanel.alpha = 1f - t;
+            }
+
+            yield return null;
+        }
+
+        if (fadePanel != null)
+        {
+            fadePanel.alpha = 0f;
+            fadePanel.gameObject.SetActive(false);
+        }
     }
 
     /// <summary>
@@ -151,24 +301,12 @@ public class LocationTransitionUI : MonoBehaviour
     /// </summary>
     private Vector3 GetTargetPositionForZoom(RectTransform iconTransform)
     {
-        // アイコンの中心位置（ワールド座標）
-        Vector3 iconWorldPos = iconTransform.position;
+        // アイコンのMapView内でのローカル位置を取得
+        Vector3 iconLocalPos = mapViewTransform.InverseTransformPoint(iconTransform.position);
 
-        // MapViewの親（Canvas）
-        Canvas canvas = mapViewTransform.GetComponentInParent<Canvas>();
-
-        // ワールド座標をローカル座標に変換
-        Vector2 localPoint;
-        RectTransformUtility.ScreenPointToLocalPointInRectangle(
-            mapViewTransform.parent as RectTransform,
-            iconWorldPos,
-            canvas.worldCamera,
-            out localPoint
-        );
-
-        // アイコンが画面中央に来るように、MapViewを逆方向に移動
-        // （アイコン位置 - 画面中央）の逆
-        Vector3 offset = -new Vector3(localPoint.x, localPoint.y, 0f);
+        // ズーム倍率を考慮して、アイコンが画面中央に来るように移動
+        // MapViewを逆方向に移動させる
+        Vector3 offset = -new Vector3(iconLocalPos.x, iconLocalPos.y, 0f) * zoomScale;
 
         return originalMapPosition + offset;
     }

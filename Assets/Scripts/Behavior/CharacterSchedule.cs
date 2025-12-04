@@ -8,10 +8,6 @@ using UnityEngine;
 [CreateAssetMenu(fileName = "CharacterSchedule", menuName = "Island/Character Schedule", order = 1)]
 public class CharacterSchedule : ScriptableObject
 {
-    [Header("Character Info")]
-    public string characterId = "emily";  // キャラクターID
-    public string characterName = "Emily";  // キャラクター名（表示用）
-
     [Header("Daily Schedule")]
     [Tooltip("時間帯ごとの行動リスト")]
     public List<CharacterAction> actions = new List<CharacterAction>();
@@ -41,7 +37,7 @@ public class CharacterSchedule : ScriptableObject
         }
 
         // 見つからない場合はデフォルト行動を返す
-        Debug.LogWarning($"No action defined for {characterId} at {timeOfDay.ToJapaneseString()}. Using default.");
+        Debug.LogWarning($"No action defined for {name} at {timeOfDay.ToJapaneseString()}. Using default.");
         return GetDefaultAction(timeOfDay);
     }
 
@@ -130,7 +126,7 @@ public class CharacterSchedule : ScriptableObject
             appearanceVariation = "sleep"
         });
 
-        Debug.Log($"Default schedule generated for {characterName}");
+        Debug.Log($"Default schedule generated for {name}");
     }
 
     /// <summary>
@@ -162,7 +158,7 @@ public class CharacterSchedule : ScriptableObject
 
             if (!found)
             {
-                Debug.LogWarning($"[{characterName}] No action defined for {time.ToJapaneseString()}");
+                Debug.LogWarning($"[{name}] No action defined for {time.ToJapaneseString()}");
                 return false;
             }
         }
@@ -178,8 +174,6 @@ public class CharacterSchedule : ScriptableObject
     {
         // 新しいスケジュールインスタンスを作成
         CharacterSchedule merged = ScriptableObject.CreateInstance<CharacterSchedule>();
-        merged.characterId = this.characterId;
-        merged.characterName = this.characterName;
 
         // 基本スケジュールのactionsをコピー
         merged.actions = new List<CharacterAction>();

@@ -261,6 +261,22 @@ public class InteractableCharacter : MonoBehaviour, IInteractable
     }
 
     /// <summary>
+    /// キャラクターIDを取得
+    /// </summary>
+    public string GetCharacterId()
+    {
+        return characterId;
+    }
+
+    /// <summary>
+    /// 現在のスプライトを取得
+    /// </summary>
+    public Sprite GetCurrentSprite()
+    {
+        return characterImage != null ? characterImage.sprite : null;
+    }
+
+    /// <summary>
     /// キャラクターを初期化（動的生成用）
     /// </summary>
     public void Setup(string charId, string scenario, Sprite sprite)

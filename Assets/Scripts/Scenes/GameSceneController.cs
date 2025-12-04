@@ -8,6 +8,8 @@ using TMPro;
 /// </summary>
 public class GameSceneController : MonoBehaviour
 {
+    public static GameSceneController Instance { get; private set; }
+
     [Header("UI References")]
     [SerializeField] private TextMeshProUGUI serverTimeText;
     [SerializeField] private TextMeshProUGUI timeOfDayText;
@@ -21,6 +23,11 @@ public class GameSceneController : MonoBehaviour
 
     // 現在の場所（場所によってBGMを変更）
     private string currentLocation = "default";
+
+    private void Awake()
+    {
+        Instance = this;
+    }
 
     private void Start()
     {
@@ -224,6 +231,22 @@ public class GameSceneController : MonoBehaviour
                         return "game_default";
                 }
         }
+    }
+
+    /// <summary>
+    /// 場所を変更してBGMを切り替える（MapLocation版）
+    /// </summary>
+    public void SetLocation(MapLocation location)
+    {
+        string locationName = location switch
+        {
+            MapLocation.Beach => "beach",
+            MapLocation.Forest => "forest",
+            MapLocation.Mountain => "cave",  // 山は洞窟扱い
+            MapLocation.River => "default",
+            _ => "default"
+        };
+        SetLocation(locationName);
     }
 
     /// <summary>

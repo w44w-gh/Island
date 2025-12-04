@@ -44,7 +44,58 @@ public class CharacterBehaviorManager : MonoBehaviour
         }
     }
 
-    [Header("Characters")]
+    /// <summary>
+    /// ScriptableObject ベースのキャラクターエントリ
+    /// </summary>
+    [System.Serializable]
+    public class CharacterDataEntry
+    {
+        public CharacterData data;                    // キャラクターデータ（ScriptableObject）
+        public ConditionalScheduleLoader conditionalLoader;  // 条件付きスケジュールローダー（オプション）
+
+        /// <summary>
+        /// 条件を評価して適用すべきスケジュールを取得
+        /// </summary>
+        public CharacterSchedule GetEvaluatedSchedule()
+        {
+            if (data == null) return null;
+
+            if (conditionalLoader != null)
+            {
+                return conditionalLoader.EvaluateSchedule(data.defaultSchedule);
+            }
+
+            return data.defaultSchedule;
+        }
+
+        /// <summary>
+        /// 条件付きスケジュールを使用しているか
+        /// </summary>
+        public bool IsUsingConditionalSchedule()
+        {
+            if (conditionalLoader == null || data == null)
+            {
+                return false;
+            }
+
+            CharacterSchedule evaluated = conditionalLoader.EvaluateSchedule(data.defaultSchedule);
+            return evaluated != data.defaultSchedule;
+        }
+    }
+
+    /// <summary>
+    /// 場所にいるキャラクター情報（ScriptableObject版）
+    /// </summary>
+    public class CharacterDataLocationInfo
+    {
+        public CharacterData data;
+        public bool isUsingConditionalSchedule;
+    }
+
+    [Header("Characters (ScriptableObject)")]
+    [SerializeField] private List<CharacterDataEntry> characterDataList = new List<CharacterDataEntry>();
+
+    [Header("Characters (Legacy)")]
     [SerializeField] private List<CharacterEntry> characters = new List<CharacterEntry>();
 
     [Header("Special Events")]
@@ -248,15 +299,16 @@ public class CharacterBehaviorManager : MonoBehaviour
     }
 
     /// <summary>
-    /// 特定のキャラクターのスケジュールを取得
+    /// 特定のキャラクターのスケジュールを取得（ScriptableObject版）
     /// </summary>
     public CharacterSchedule GetSchedule(string characterId)
     {
-        foreach (var entry in characters)
+        // ScriptableObject版から検索
+        foreach (var entry in characterDataList)
         {
-            if (entry.schedule.characterId == characterId)
+            if (entry.data != null && entry.data.characterId == characterId)
             {
-                return entry.schedule;
+                return entry.GetEvaluatedSchedule();
             }
         }
 
@@ -388,4 +440,38 @@ public class CharacterBehaviorManager : MonoBehaviour
     /// 全キャラクターEntryを取得（読み取り専用）
     /// </summary>
     public IReadOnlyList<CharacterEntry> AllCharacterEntries => characters;
+
+    /// <summary>
+    /// 指定した場所にいるキャラクターのリストを取得（ScriptableObject版）
+    /// </summary>
+    public List<CharacterDataLocationInfo> GetCharacterDataAtLocation(MapLocation location, TimeOfDay timeOfDay)
+    {
+        List<CharacterDataLocationInfo> result = new List<CharacterDataLocationInfo>();
+
+        foreach (var entry in characterDataList)
+        {
+            if (entry.data == null || entry.data.defaultSchedule == null)
+            {
+                continue;
+            }
+
+            // 評価済みスケジュールを取得
+            CharacterSchedule activeSchedule = entry.GetEvaluatedSchedule();
+
+            // 現在の時間帯の行動を取得
+            CharacterAction action = activeSchedule.GetActionForTimeOfDay(timeOfDay);
+
+            // この場所にいて、存在している場合
+            if (action != null && action.isPresent && action.location == location)
+            {
+                result.Add(new CharacterDataLocationInfo
+                {
+                    data = entry.data,
+                    isUsingConditionalSchedule = entry.IsUsingConditionalSchedule()
+                });
+            }
+        }
+
+        return result;
+    }
 }

@@ -48,6 +48,22 @@ public class GameManager : MonoBehaviour
         InitializeTimeSync();
     }
 
+    private void Start()
+    {
+        // ステータスバーを表示（フルスクリーン解除）
+        StartCoroutine(ShowStatusBarDelayed());
+    }
+
+    private System.Collections.IEnumerator ShowStatusBarDelayed()
+    {
+        // 少し待ってから設定（Unityの初期化完了後）
+        yield return new WaitForSeconds(0.5f);
+#if UNITY_ANDROID && !UNITY_EDITOR
+        ApplicationChrome.statusBarState = ApplicationChrome.States.Visible;
+        Debug.Log("statusBarState = Visible");
+#endif
+    }
+
     private bool isRefreshingTime = false;  // 時刻同期中フラグ
     private long initialSavedTimestamp = 0; // 起動時のセーブデータタイムスタンプ（オフライン処理用）
 

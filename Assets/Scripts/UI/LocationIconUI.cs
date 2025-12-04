@@ -5,7 +5,9 @@ using UnityEngine.UI;
 /// <summary>
 /// マップ上の場所アイコンUI
 /// その場所にいるキャラクターのアイコンを表示
+/// タップで場所へ移動
 /// </summary>
+[RequireComponent(typeof(Button))]
 public class LocationIconUI : MonoBehaviour
 {
     [Header("Location")]
@@ -20,6 +22,34 @@ public class LocationIconUI : MonoBehaviour
     [SerializeField] private Color conditionalIconColor = Color.yellow; // 条件付きスケジュールの色（光るイメージ）
 
     private List<GameObject> spawnedIcons = new List<GameObject>();
+    private Button button;
+
+    private void Awake()
+    {
+        // Buttonコンポーネントを取得してクリックイベントを設定
+        button = GetComponent<Button>();
+        if (button != null)
+        {
+            button.onClick.AddListener(OnIconClicked);
+        }
+
+        // CharacterIconsContainerが未設定なら自分自身を使用
+        if (characterIconsContainer == null)
+        {
+            characterIconsContainer = transform;
+        }
+    }
+
+    /// <summary>
+    /// アイコンがクリックされた時
+    /// </summary>
+    private void OnIconClicked()
+    {
+        if (GameViewManager.Instance != null)
+        {
+            GameViewManager.Instance.MoveToLocation(location, GetRectTransform());
+        }
+    }
 
     /// <summary>
     /// キャラアイコンを更新
@@ -124,5 +154,10 @@ public class LocationIconUI : MonoBehaviour
     private void OnDestroy()
     {
         ClearCharacterIcons();
+
+        if (button != null)
+        {
+            button.onClick.RemoveListener(OnIconClicked);
+        }
     }
 }
