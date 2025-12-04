@@ -44,6 +44,9 @@ public class GameManager : MonoBehaviour
         _instance = this;
         DontDestroyOnLoad(gameObject);
 
+        // 60fpsに設定
+        Application.targetFrameRate = 60;
+
         // NTP時刻同期を初期化
         InitializeTimeSync();
     }
@@ -59,13 +62,16 @@ public class GameManager : MonoBehaviour
         // 少し待ってから設定（Unityの初期化完了後）
         yield return new WaitForSeconds(0.5f);
 #if UNITY_ANDROID && !UNITY_EDITOR
-        ApplicationChrome.statusBarState = ApplicationChrome.States.Visible;
-        Debug.Log("statusBarState = Visible");
+        // 半透明のステータスバーとナビゲーションバー
+        ApplicationChrome.statusBarState = ApplicationChrome.States.TranslucentOverContent;
+        ApplicationChrome.navigationBarState = ApplicationChrome.States.TranslucentOverContent;
+        Debug.Log("StatusBar and NavigationBar set to TranslucentOverContent");
 #endif
     }
 
     private bool isRefreshingTime = false;  // 時刻同期中フラグ
     private long initialSavedTimestamp = 0; // 起動時のセーブデータタイムスタンプ（オフライン処理用）
+    private long pausedTimestamp = 0;       // ポーズ時のタイムスタンプ
 
     private void Update()
     {
@@ -99,6 +105,7 @@ public class GameManager : MonoBehaviour
         {
             // アプリが一時停止された（画面OFFになった）
             Debug.Log("App paused - Auto saving");
+            pausedTimestamp = System.DateTimeOffset.UtcNow.ToUnixTimeSeconds();
             AutoSave();
         }
         else
@@ -118,6 +125,7 @@ public class GameManager : MonoBehaviour
         {
             // アプリがフォーカスを失った
             Debug.Log("App lost focus - Auto saving");
+            pausedTimestamp = System.DateTimeOffset.UtcNow.ToUnixTimeSeconds();
             AutoSave();
         }
         else
@@ -139,11 +147,20 @@ public class GameManager : MonoBehaviour
             return;
         }
 
+        // gameStateがない場合はスキップ
+        if (gameState == null)
+        {
+            Debug.Log("GameState not ready, skipping refresh");
+            return;
+        }
+
         isRefreshingTime = true;
 
         // DayTransitionUIを使って復帰処理
-        if (DayTransitionManager.Instance.IsReady() && gameState != null)
+        if (DayTransitionManager.Instance != null && DayTransitionManager.Instance.IsReady())
         {
+            Debug.Log("Using DayTransitionManager for resume");
+
             DayTransitionManager.Instance.ShowWithInitialization(
                 gameState,
                 async () =>
@@ -155,8 +172,14 @@ public class GameManager : MonoBehaviour
                     {
                         Debug.Log("Time sync completed successfully on resume");
 
-                        // ゲーム時間を再キャプチャ（復帰時に時刻を更新）
+                        // ゲーム時間を再キャプチャ
                         globalGameTime?.Capture();
+
+                        // 経過時間を処理
+                        if (pausedTimestamp > 0)
+                        {
+                            gameState.ProcessOfflineTime(pausedTimestamp);
+                        }
                     }
                     else
                     {
@@ -169,7 +192,7 @@ public class GameManager : MonoBehaviour
         }
         else
         {
-            // DayTransitionUIが使えない場合は従来通りSceneFadeManagerを使用
+            Debug.Log("DayTransitionManager not ready, using SceneFadeManager");
             _ = RefreshTimeWithSceneFadeAsync();
         }
     }
